@@ -1,0 +1,8 @@
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.Form1.resources
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.Properties.Resources.resources
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csproj.GenerateResource.Cache
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\bin\Debug\My_Friend.exe.config
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\bin\Debug\My_Friend.exe
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\bin\Debug\My_Friend.pdb
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.exe
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.pdb
