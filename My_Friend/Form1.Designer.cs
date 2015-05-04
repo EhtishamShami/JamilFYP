@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.System_voice = new System.Windows.Forms.Button();
             this.Command = new System.Windows.Forms.TextBox();
             this.Speak_here = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Command1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -64,11 +64,15 @@
             // 
             // Command
             // 
+            this.Command.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Command.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Command.ForeColor = System.Drawing.SystemColors.Window;
             this.Command.Location = new System.Drawing.Point(12, 12);
             this.Command.Multiline = true;
             this.Command.Name = "Command";
             this.Command.Size = new System.Drawing.Size(282, 27);
             this.Command.TabIndex = 3;
+            this.Command.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Command.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // Speak_here
@@ -91,13 +95,26 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Command1
+            // 
+            this.Command1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.Command1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Command1.ForeColor = System.Drawing.SystemColors.Window;
+            this.Command1.Location = new System.Drawing.Point(12, 55);
+            this.Command1.Multiline = true;
+            this.Command1.Name = "Command1";
+            this.Command1.Size = new System.Drawing.Size(282, 26);
+            this.Command1.TabIndex = 7;
+            this.Command1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(306, 353);
+            this.Controls.Add(this.Command1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Speak_here);
             this.Controls.Add(this.Command);
@@ -119,6 +136,7 @@
         private System.Windows.Forms.TextBox Command;
         private System.Windows.Forms.Button Speak_here;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox Command1;
 
     }
 }
