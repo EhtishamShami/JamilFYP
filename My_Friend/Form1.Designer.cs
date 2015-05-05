@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.System_voice = new System.Windows.Forms.Button();
             this.Command = new System.Windows.Forms.TextBox();
             this.Speak_here = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -50,18 +49,6 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // System_voice
-            // 
-            this.System_voice.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.System_voice.ForeColor = System.Drawing.Color.Black;
-            this.System_voice.Location = new System.Drawing.Point(12, 312);
-            this.System_voice.Name = "System_voice";
-            this.System_voice.Size = new System.Drawing.Size(83, 29);
-            this.System_voice.TabIndex = 2;
-            this.System_voice.Text = "System voice";
-            this.System_voice.UseVisualStyleBackColor = false;
-            this.System_voice.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Command
             // 
             this.Command.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -77,7 +64,7 @@
             // 
             // Speak_here
             // 
-            this.Speak_here.Location = new System.Drawing.Point(101, 312);
+            this.Speak_here.Location = new System.Drawing.Point(38, 312);
             this.Speak_here.Name = "Speak_here";
             this.Speak_here.Size = new System.Drawing.Size(92, 29);
             this.Speak_here.TabIndex = 5;
@@ -87,7 +74,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(199, 312);
+            this.button2.Location = new System.Drawing.Point(173, 314);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 27);
             this.button2.TabIndex = 6;
@@ -118,7 +105,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Speak_here);
             this.Controls.Add(this.Command);
-            this.Controls.Add(this.System_voice);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
@@ -132,7 +118,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button System_voice;
         private System.Windows.Forms.TextBox Command;
         private System.Windows.Forms.Button Speak_here;
         private System.Windows.Forms.Button button2;

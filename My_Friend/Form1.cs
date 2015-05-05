@@ -31,13 +31,13 @@ namespace My_Friend
         {
 
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //private void button1_Click(object sender, EventArgs e)
+        //{
 
-            builder.ClearContent();
-            builder.AppendText(Command.Text);
-            speech.Speak(builder);
-        }
+        //    builder.ClearContent();
+        //    builder.AppendText(Command.Text);
+        //    speech.Speak(builder);
+        //}
 
         //private void pictureBox1_Click_1(object sender, EventArgs e)
         //{
@@ -81,14 +81,18 @@ namespace My_Friend
             }
             else
             {
+                Command.Clear();
+                Command1.Clear();
                 Command.Text = Command.Text + " " + e.Result.Text.ToString() + " ";
                 String question = e.Result.Text.ToString();
                 if (question.Contains("How are you"))
                 {
-                    Command1.Text = Command1.Text + " I am fine";
+                    //speech.Speak(" I am fine");
+                    Command1.Text = Command1.Text + " I am fine";   
                 }
                 else if (question.Contains("What is time"))
                 {
+                    //speech.Speak("Check right bottom of your screen");
                     Command1.Text = Command1.Text + " Check right bottom of your screen";
                 }
                 else if (question.Contains("Tell me your name"))
@@ -122,7 +126,7 @@ namespace My_Friend
                 else if (question.Contains("Who is founder of Apple company"))
                 {
                     Command1.Text = Command1.Text + "Steve Jobs is the fouder of Apple company";
-                }
+                }              
             }
         }
             
