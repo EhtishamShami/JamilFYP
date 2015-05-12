@@ -12,18 +12,20 @@ using System.Speech.Recognition;
 using System.Threading;
 namespace My_Friend
 {
-    public partial class Form1 : Form
+    public partial class My_Friend : Form
     {
-        public Form1()
+        public My_Friend()
         {
+            
             InitializeComponent();
-            Command.Show();           
+                      
         }
         SpeechSynthesizer speech = new SpeechSynthesizer();
         PromptBuilder builder = new PromptBuilder();
         SpeechRecognitionEngine recognize = new SpeechRecognitionEngine();
         private void Form1_Load(object sender, EventArgs e)
         {
+            Visualiser.Hide();
 
         }
 
@@ -50,23 +52,25 @@ namespace My_Friend
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            label1.Hide();
+
+            InfoBox.Hide();
             Speak_here.Enabled = false;
             Speak_here.Enabled = true;
+          //Visualiser.Show(); 
             Choices slist = new Choices();
-            slist.Add(new string[]{"How are you","What is time","Tell me your name","Who is your developer",
+            slist.Add(new string[]{"Exit","How are you","What is time","Tell me your name","Who is your developer",
             "Where is islamabad located","Who is president of USA","Tell me few products of Pepsi",
             "Who is your favourite star", "Who is best Apple or Samsung", "Who is founder of Apple company"});
             Grammar gr = new Grammar(new GrammarBuilder(slist));
             try
             {
-            
-            recognize.RequestRecognizerUpdate();
+           // visualizer2.Show(); 
+            recognize.RequestRecognizerUpdate(); 
             recognize.LoadGrammar(gr);
             recognize.SpeechRecognized += recognize_SpeechRecognized;
             recognize.SetInputToDefaultAudioDevice();
             recognize.RecognizeAsync(RecognizeMode.Multiple);
-
+            
             }
             catch
             {
@@ -75,6 +79,9 @@ namespace My_Friend
         }
         private void recognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
+            Visualiser.Show();  
+           // visualizer2.Hide(); 
+             
             if (e.Result.Text == "Exit")
             {
                 Application.Exit();
@@ -82,51 +89,60 @@ namespace My_Friend
             else
             {
                 Command.Clear();
-                Command1.Clear();
+                Reply.Clear();
                 Command.Text = Command.Text + " " + e.Result.Text.ToString() + " ";
                 String question = e.Result.Text.ToString();
                 if (question.Contains("How are you"))
                 {
-                    //speech.Speak(" I am fine");
-                    Command1.Text = Command1.Text + " I am fine";   
+                    Reply.Text = Reply.Text + " I am fine";
+                    speech.Speak(" I am fine");
                 }
                 else if (question.Contains("What is time"))
                 {
-                    //speech.Speak("Check right bottom of your screen");
-                    Command1.Text = Command1.Text + " Check right bottom of your screen";
+                    Reply.Text = Reply.Text + " Check right bottom of your screen";
+                    speech.Speak(" Check right bottom of your screen");
                 }
                 else if (question.Contains("Tell me your name"))
                 {
-                    Command1.Text = Command1.Text + "My name is My_Friend";
+                    Reply.Text = Reply.Text + "My name is My_Friend";
+                    speech.Speak(" My name is My_Friend");
                 }
                 else if (question.Contains("Who is your developer"))
                 {
-                    Command1.Text = Command1.Text + "You are my developer";
+                    Reply.Text = Reply.Text + "You are my developer";
+                    speech.Speak(" You are my developer");
                 }
                 else if (question.Contains("Where is Islamabad located"))
                 {
-                    Command1.Text = Command1.Text + "Islamabad is located in Pakistan";
+                    Reply.Text = Reply.Text + "Islamabad is located in Pakistan";
+                    speech.Speak(" Islamabad is located in Pakistan");
                 }
                 else if (question.Contains("Who is president of USA"))
                 {
-                    Command1.Text = Command1.Text + "Barack Obama is the President of USA";
+                    Reply.Text = Reply.Text + "Barack Obama is the President of USA";
+                    speech.Speak(" Barack Obama is the President of USA");
                 }
                 else if (question.Contains("Tell me few products of Pepsi"))
                 {
-                    Command1.Text = Command1.Text + "Dew, Pepsi Fanta are Pepsi's product";
+                    Reply.Text = Reply.Text + "Dew, Pepsi Fanta are Pepsi's product";
+                    speech.Speak("Dew, Pepsi Fanta are Pepsi's product");
                 }
                 else if (question.Contains("Who is your favourite star"))
                 {
-                    Command1.Text = Command1.Text + "Johnny Depp is my favourite star";
+                    Reply.Text = Reply.Text + "Johnny Depp is my favourite star";
+                    speech.Speak(" Johnny Depp is my favourite star");
                 }
                 else if (question.Contains("Who is best Apple or Samsung"))
                 {
-                    Command1.Text = Command1.Text + "Both are best but my choice is Apple";
+                    Reply.Text = Reply.Text + "Both are best but my choice is Apple";
+                    speech.Speak(" Both are best but my choice is Apple");
                 }
                 else if (question.Contains("Who is founder of Apple company"))
                 {
-                    Command1.Text = Command1.Text + "Steve Jobs is the fouder of Apple company";
-                }              
+                    Reply.Text = Reply.Text + "Steve Jobs is the fouder of Apple company";
+                    speech.Speak(" Steve Jobs is the fouder of Apple company");
+                }
+                Visualiser.Hide();
             }
         }
             
@@ -140,5 +156,14 @@ namespace My_Friend
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
