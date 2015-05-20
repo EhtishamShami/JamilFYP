@@ -16,9 +16,7 @@ namespace My_Friend
     {
         public My_Friend()
         {
-            
-            InitializeComponent();
-                      
+             InitializeComponent();                      
         }
         SpeechSynthesizer speech = new SpeechSynthesizer();
         PromptBuilder builder = new PromptBuilder();

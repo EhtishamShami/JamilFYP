@@ -6,3 +6,4 @@ C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Deb
 C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csproj.GenerateResource.Cache
 C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.exe
 C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.pdb
+C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csprojResolveAssemblyReference.cache
