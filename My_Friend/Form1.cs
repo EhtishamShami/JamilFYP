@@ -53,7 +53,7 @@ namespace My_Friend
             {
                  
                 Choices slist = new Choices();
-                slist.Add(new string[]{"Hi","What are you doing","who is my love","Lets go for a walk","Why","I am feeling sick",
+                slist.Add(new string[]{"Hi","What are you doing","who is my love","who is my butterfly","Why","I am feeling sick",
                 "I want to Play game","Can you help me","Where do you live","Do you have feelings","I am hungry","Do you want to eat something",
                 "Hello","Hey","Take Care","Ok take care","Ok good by","Ok thats it","Ok thats enough","Suggest me few good movies",
                 "Good by","Thats it","I want to be a good programmer","Do you want to be friend of mine","Exit","How are you","What is time",
@@ -90,10 +90,10 @@ namespace My_Friend
                 Reply.Clear();
                 Command.Text = Command.Text + " " + e.Result.Text.ToString() + " ";
                 String question = e.Result.Text.ToString();
-                if (question.Contains("I am fine how are you"))
+                if (question.Contains("who is my butterfly"))
                 {
-                    Reply.Text = Reply.Text + " I am fine";
-                    speech.Speak(" I am fine");
+                    Reply.Text = Reply.Text + " She is your butterfly";
+                    speech.Speak(" She is your butterfly her name is mujay sharm a gie");
                 }
                 if (question.Contains("How are you"))
                 {
