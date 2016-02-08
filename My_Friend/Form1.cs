@@ -11,10 +11,15 @@ using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Threading;
+using System.IO;
 namespace My_Friend
 {
+
     public partial class My_Friend : Form
     {
+        public Choices slist = new Choices();
+        public String path;
+        string[] result = File.ReadAllLines("file.txt");
         public My_Friend()
         {
              InitializeComponent();             
@@ -24,6 +29,8 @@ namespace My_Friend
         SpeechRecognitionEngine recognize = new SpeechRecognitionEngine();
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (result.Length > 1)
+            { slist.Add(new string[] { result[0] }); }
             Visualiser.Hide();
         }
         private void label1_Click(object sender, EventArgs e)
@@ -49,11 +56,12 @@ namespace My_Friend
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+           
             InfoBox.Hide();
             try
             {
                  
-                Choices slist = new Choices();
+              
                 slist.Add(new string[]{"Hi","What are you doing","who is my love","who is my butterfly","Why","I am feeling sick",
                 "I want to Play game","Can you help me","Where do you live","Do you have feelings","I am hungry","Do you want to eat something",
                 "Hello","Hey","Take Care","Ok take care","Ok good by","Ok thats it","Ok thats enough","Suggest me few good movies",
@@ -91,6 +99,13 @@ namespace My_Friend
                 Reply.Clear();
                 Command.Text = Command.Text + " " + e.Result.Text.ToString() + " ";
                 String question = e.Result.Text.ToString();
+                if (result.Length > 1)
+                {
+                    if (question.Contains(result[0]))
+                    {
+                        Process.Start(@result[1]);
+                    }
+                }
                 if (question.Contains("who is my butterfly"))
                 {
                     Reply.Text = Reply.Text + " She is your butterfly";
@@ -300,6 +315,13 @@ namespace My_Friend
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Binder obj = new Binder();
+            obj.Show();
+            this.Hide();
         }
     }
 }

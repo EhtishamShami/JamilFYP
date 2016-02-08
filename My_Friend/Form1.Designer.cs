@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(My_Friend));
             this.InfoBox = new System.Windows.Forms.Label();
             this.Command = new System.Windows.Forms.TextBox();
             this.Reply = new System.Windows.Forms.TextBox();
             this.Speak_here = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
             this.Visualiser = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Visualiser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // InfoBox
@@ -98,7 +101,6 @@
             // 
             // Visualiser
             // 
-         //   this.Visualiser.Image = global::My_Friend.Properties.Resources.animated_sound_waves;
             this.Visualiser.Location = new System.Drawing.Point(12, 202);
             this.Visualiser.Name = "Visualiser";
             this.Visualiser.Size = new System.Drawing.Size(282, 72);
@@ -107,6 +109,20 @@
             this.Visualiser.TabStop = false;
             this.Visualiser.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(199, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // My_Friend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +130,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(306, 353);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Visualiser);
             this.Controls.Add(this.Reply);
             this.Controls.Add(this.Exit);
@@ -125,6 +142,7 @@
             this.Text = "MyFriend";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Visualiser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +156,7 @@
         private System.Windows.Forms.PictureBox Visualiser;
         private System.Windows.Forms.Button Speak_here;
         private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
     }
 }
