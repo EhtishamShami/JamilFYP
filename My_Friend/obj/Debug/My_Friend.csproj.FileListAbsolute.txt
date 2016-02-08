@@ -30,7 +30,7 @@ E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.exe
 E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.pdb
 E:\JamilFYP\JamilFYP\My_Friend\bin\Debug\My_Friend.exe
 E:\JamilFYP\JamilFYP\My_Friend\bin\Debug\My_Friend.pdb
-E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.csprojResolveAssemblyReference.cache
 E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.My_Friend.resources
 E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.Properties.Resources.resources
 E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.csproj.GenerateResource.Cache
+E:\JamilFYP\JamilFYP\My_Friend\obj\Debug\My_Friend.Binder.resources

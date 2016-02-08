@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -94,6 +95,7 @@ namespace My_Friend
                 {
                     Reply.Text = Reply.Text + " She is your butterfly";
                     speech.Speak(" She is your butterfly her name is mujay sharm a gie");
+                    Process.Start(@"c:\NVIDIA");
                 }
                 if (question.Contains("How are you"))
                 {
