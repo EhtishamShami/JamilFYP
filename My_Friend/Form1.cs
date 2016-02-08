@@ -103,13 +103,14 @@ namespace My_Friend
                 {
                     if (question.Contains(result[0]))
                     {
+                        Reply.Text = Reply.Text + " Zema de zra Qarar rasha";
                         Process.Start(@result[1]);
                     }
                 }
                 if (question.Contains("who is my butterfly"))
                 {
                     Reply.Text = Reply.Text + " She is your butterfly";
-                    speech.Speak(" She is your butterfly her name is mujay sharm a gie");
+                    speech.Speak(" She is your butterfly her name is mujay sharm aie");
                     Process.Start(@"c:\NVIDIA");
                 }
                 if (question.Contains("How are you"))
