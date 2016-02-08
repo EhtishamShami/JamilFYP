@@ -98,7 +98,7 @@
             // 
             // Visualiser
             // 
-            this.Visualiser.Image = global::My_Friend.Properties.Resources.animated_sound_waves;
+         //   this.Visualiser.Image = global::My_Friend.Properties.Resources.animated_sound_waves;
             this.Visualiser.Location = new System.Drawing.Point(12, 202);
             this.Visualiser.Name = "Visualiser";
             this.Visualiser.Size = new System.Drawing.Size(282, 72);

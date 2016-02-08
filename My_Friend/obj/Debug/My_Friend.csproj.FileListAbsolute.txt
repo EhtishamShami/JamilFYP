@@ -6,4 +6,22 @@ C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Deb
 C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csproj.GenerateResource.Cache
 C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.exe
 C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.pdb
-C:\Users\Jamil\Documents\Visual Studio 2013\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csprojResolveAssemblyReference.cache
+C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\bin\Debug\NAudio.dll
+C:\Users\Jamil\documents\visual studio 2013\Projects\My_Friend\My_Friend\bin\Debug\NAudio.xml
+E:\Projects\My_Friend\My_Friend\bin\Debug\My_Friend.exe.config
+E:\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.pdb
+E:\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csprojResolveAssemblyReference.cache
+E:\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.My_Friend.resources
+E:\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.csproj.GenerateResource.Cache
+E:\Projects\My_Friend\My_Friend\bin\Debug\My_Friend.exe
+E:\Projects\My_Friend\My_Friend\bin\Debug\My_Friend.pdb
+E:\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.Properties.Resources.resources
+E:\Projects\My_Friend\My_Friend\obj\Debug\My_Friend.exe
+E:\JamilFYP\My_Friend\My_Friend\bin\Debug\My_Friend.exe.config
+E:\JamilFYP\My_Friend\My_Friend\obj\Debug\My_Friend.exe
+E:\JamilFYP\My_Friend\My_Friend\obj\Debug\My_Friend.pdb
+E:\JamilFYP\My_Friend\My_Friend\bin\Debug\My_Friend.exe
+E:\JamilFYP\My_Friend\My_Friend\bin\Debug\My_Friend.pdb
+E:\JamilFYP\My_Friend\My_Friend\obj\Debug\My_Friend.My_Friend.resources
+E:\JamilFYP\My_Friend\My_Friend\obj\Debug\My_Friend.Properties.Resources.resources
+E:\JamilFYP\My_Friend\My_Friend\obj\Debug\My_Friend.csproj.GenerateResource.Cache
