@@ -75,6 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Server.cs" />
     <Compile Include="SpeechRecognizedE.cs" />
     <EmbeddedResource Include="Binder.resx">
       <DependentUpon>Binder.cs</DependentUpon>
