@@ -12,7 +12,8 @@ namespace My_Friend
 {
     public partial class Binder : Form
     {
-        String path = ""; bool fol;
+        String path = "";
+        bool fol;
         public Binder()
         {
             InitializeComponent();
@@ -39,15 +40,17 @@ namespace My_Friend
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bid(Voicebox.Text.ToString(),Pathbox.Text.ToString());
-            
+            bid(Voicebox.Text.ToString(), Pathbox.Text.ToString());
+
         }
-        void bid(String bind,String path)
+        void bid(String bind, String path)
         {
-            String[] resultstring = {bind,path};
-            if (fol== true)
+            String[] resultstring = { bind, path };
+            if (fol == true)
             {
-                File.WriteAllLines("file.txt", resultstring);
+
+                File.AppendAllLines("file.txt", resultstring);
+
             }
             My_Friend obj = new My_Friend();
             obj.Show();
@@ -60,6 +63,16 @@ namespace My_Friend
             fol = true;
             panel1.Visible = false;
             panel2.Visible = true;
+        }
+
+        private void Pathbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Voicebox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

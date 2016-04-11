@@ -1,2 +1,8 @@
-Take me to my room
-E:\room.exe
+multi
+D:\FFOutput
+music
+D:\FFOutput\Songs vegera
+open d
+D:\
+open image
+D:\wallpaper.jpg
