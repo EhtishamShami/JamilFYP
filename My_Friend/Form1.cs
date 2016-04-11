@@ -124,18 +124,14 @@ namespace My_Friend
                 Reply.Text = Reply.Text + " She is your butterfly";
                 speech.Speak(" She is your butterfly her name is mujay sharm aie");
                
-            }
-            if (question.Contains("How are you"))
+            }else 
+            if (question.Contains("What are you doing"))
             {
                 Reply.Text = Reply.Text + " I am fine";
                 speech.Speak(" I am fine");
             }
-            else if (question.Contains("who is my love"))
-            {
-                Reply.Text = Reply.Text + " ooooohhhhhh u know her name i will just give u a hint she is pathan";
-                speech.Speak(" ooooooooooh u know her name i will just give u a hint she is pathan");
-            }
-            else if (question.Contains("What are you doing"))
+          
+            else if (question.Contains("How are you"))
             {
                 Reply.Text = Reply.Text + " Answering your questions";
                 speech.Speak(" Answering your questions");
