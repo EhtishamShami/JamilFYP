@@ -45,7 +45,7 @@ namespace My_Friend
                 slist.Add(new string[] { "What is time" });
             }
             bool value=obj.StartServer();
-            label1.Text = value.ToString();
+         //   label1.Text = value.ToString();
             Visualiser.Hide();
         }
         private void label1_Click(object sender, EventArgs e)
