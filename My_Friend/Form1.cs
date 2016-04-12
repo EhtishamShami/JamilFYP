@@ -124,16 +124,6 @@ namespace My_Friend
                         Process.Start(@result[i + 1]);
                     }
                 }
-                if (question.Contains("What is time"))
-                {
-                    check = false;
-                    //DateTime date = new DateTime();
-                    string custom = DateTime.Now.ToLongTimeString();
-
-                    Reply.Text = Reply.Text + "Its " + custom;
-                    speech.Speak("Its " + custom);
-                }
-
                 if (question.Contains("who is my butterfly"))
                 {
                     Reply.Text = Reply.Text + " She is your butterfly";
@@ -149,8 +139,28 @@ namespace My_Friend
 
                 else if (question.Contains("how are you"))
                 {
-                    Reply.Text = Reply.Text + " Answering your questions";
-                    speech.Speak(" Answering your questions");
+                   // Reply.Text = Reply.Text + " Answering your questions";
+                    //speech.Speak(" Answering your questions");
+
+                    //DateTime date = new DateTime();
+                    string custom = DateTime.Now.ToLongTimeString();
+                    //MessageBox.Show(custom);
+                    Reply.Text = Reply.Text + "Its " + custom;
+                    speech.Speak("Its " + custom);
+                }
+
+                else if (question.Contains("what is time"))
+                {
+                    //DateTime date = new DateTime();
+                    string custom = DateTime.Now.ToLongTimeString();
+                    //MessageBox.Show(custom);
+                    Reply.Text = Reply.Text + "Its " + custom;
+                    speech.Speak("Its " + custom);
+                }
+                else if (question.Contains("shutdown"))
+                {
+                    speech.Speak(" Steve Jobs is the fouder of Apple company");
+                    Process.Start("shutdown", "/s /t 0"); Process.Start("Shutdown", "-s -t 10");
                 }
                 else if (question.Contains("Lets go for a walk"))
                 {
@@ -232,14 +242,6 @@ namespace My_Friend
                     speech.Speak(" That is the reason I am designed for");
                 }
 
-                else if (question.Contains("What is time"))
-                {
-                    //DateTime date = new DateTime();
-                    string custom = DateTime.Now.ToLongTimeString();
-                    //MessageBox.Show(custom);
-                    Reply.Text = Reply.Text + "Its " + custom;
-                    speech.Speak("Its " + custom);
-                }
                 else if (question.Contains("Tell me your name"))
                 {
                     Reply.Text = Reply.Text + "My name is My Friend";
