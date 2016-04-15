@@ -16,7 +16,7 @@ public class Client {
         StrictMode.setThreadPolicy(policy);
         Socket socket;
         try {
-            socket = new Socket( "192.168.10.39", 8080);
+            socket = new Socket( "192.168.8.100", 8080);
             PrintWriter writer = new PrintWriter(socket.getOutputStream());
             writer.print(command);
             writer.flush();

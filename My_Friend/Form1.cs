@@ -124,10 +124,10 @@ namespace My_Friend
                         Process.Start(@result[i + 1]);
                     }
                 }
-                if (question.Contains("who is my butterfly"))
+                if (question.Contains(" "))
                 {
-                    Reply.Text = Reply.Text + " She is your butterfly";
-                    speech.Speak(" She is your butterfly her name is mujay sharm aie");
+                    Reply.Text = Reply.Text + "  ";
+                    speech.Speak(" ");
 
                 }
                 else
