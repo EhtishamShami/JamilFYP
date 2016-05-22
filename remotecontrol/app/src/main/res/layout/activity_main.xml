@@ -8,25 +8,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ehtisham.remotecontrol.MainActivity"
-    android:background="@drawable/coco">
+    android:background="@drawable/jarvis">
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="50dip"
-        android:layout_height="50dip"
-        android:src="@drawable/buttonlogo"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
         android:scaleType="fitCenter"
-        android:background="@android:color/transparent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Hey there how can i help you "
-        android:id="@+id/textView"
-        android:layout_above="@+id/imageButton"
+        android:background="#00ffffff"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -35,8 +25,32 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text=""
         android:id="@+id/textView2"
+        android:textColor="#11d3b9"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How may I help you"
+        android:id="@+id/textView"
+        android:textColor="#11d3b9"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp" />
+        android:layout_marginTop="54dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Press Here"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#11d3b9" />
 
 </RelativeLayout>

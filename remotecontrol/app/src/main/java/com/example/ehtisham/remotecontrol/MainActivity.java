@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
     private TextView txtSpeechInput;
     private ImageButton btnSpeak;
     private final int REQ_CODE_SPEECH_INPUT = 100;
+    String systemip;
    Client send=new Client();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,8 @@ public class MainActivity extends Activity {
         txtSpeechInput.setTextColor(Color.parseColor("#FFFFFF"));
         // hide the action bar
 //        getActionBar().hide();
-
+        Bundle extras = getIntent().getExtras();
+        systemip= extras.getString("ip");
         btnSpeak.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -73,7 +75,7 @@ s     * */
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     txtSpeechInput.setText(result.get(0));
-                    send.SendCommand(result.get(0).toString());
+                    send.SendCommand(result.get(0).toString(),systemip);
                 }
                 break;
             }

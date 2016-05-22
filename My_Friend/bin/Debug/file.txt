@@ -1,8 +1,32 @@
-multi
-D:\FFOutput
+﻿play it
+F:\MULTIMEDIA\SONGS\ENglish Songs\VEDIOS\Eminem - Not Afraid [www.keepvid.com].mp4
 music
 D:\FFOutput\Songs vegera
+open computer
+C:\Windows\explorer.exe
+open c
+C:\
 open d
 D:\
+open f
+F:\
+open g
+G:\
+open h
+H:\
+open i
+I:\
+open j
+J:\
+office file
+E:\Jamil Research Paper.docx
+Office file
+E:\Jamil Research Paper.docx
 open image
-D:\wallpaper.jpg
+‪E:\Wallpapers\image.png
+Arabic song
+C:\Users\JamilUr\Downloads\Music
+image
+E:\N8 PICS\New folder\1.jpg
+Gotham
+F:\1.mkv

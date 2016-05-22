@@ -12,6 +12,8 @@ using System.Speech.Synthesis;
 using System.Speech.Recognition;
 using System.Threading;
 using System.IO;
+using SHDocVw;
+using System.Drawing.Imaging;
 namespace My_Friend
 {
 
@@ -22,6 +24,8 @@ namespace My_Friend
         string[] result = File.ReadAllLines("file.txt");
         bool check;
         Server obj;
+        string processType;
+        ShellWindows _shellWindows = new SHDocVw.ShellWindows();
         public My_Friend()
         {
             InitializeComponent();
@@ -46,7 +50,7 @@ namespace My_Friend
             }
             bool value=obj.StartServer();
          //   label1.Text = value.ToString();
-            Visualiser.Hide();
+            //Visualiser.Hide();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -92,8 +96,7 @@ namespace My_Friend
         }
         private void recognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            Visualiser.Show();  
-           // visualizer2.Hide(); 
+          
             
             if (e.Result.Text == "Exit")
             {
@@ -101,19 +104,20 @@ namespace My_Friend
             }
             else
             {
-                Command.Clear();
-                Reply.Clear();
-                Command.Text = Command.Text + " " + e.Result.Text.ToString() + " ";
+               // Command.Clear();
+               // Reply1.Clear();
+               // Command.Text = Command.Text + " " + e.Result.Text.ToString() + " ";
                 String question = e.Result.Text.ToString();
                 reply(question);
-                Visualiser.Hide();
+                //Visualiser.Hide();
             }
         }
 
         public void reply(string question)
         {
             check = true;
-            label1.Text = question;
+            speech.Speak(question);
+          
             if (result.Length > 1 && check == true)
             {
                 for (int i = 0; i < result.Length; i++)
@@ -124,16 +128,10 @@ namespace My_Friend
                         Process.Start(@result[i + 1]);
                     }
                 }
-                if (question.Contains(" "))
+              
+               if (question.Contains("what are you doing"))
                 {
-                    Reply.Text = Reply.Text + "  ";
-                    speech.Speak(" ");
-
-                }
-                else
-                if (question.Contains("what are you doing"))
-                {
-                    Reply.Text = Reply.Text + " I am fine";
+                   // Reply1.Text = Reply1.Text + " I am fine";
                     speech.Speak(" I am fine");
                 }
 
@@ -145,7 +143,7 @@ namespace My_Friend
                     //DateTime date = new DateTime();
                     string custom = DateTime.Now.ToLongTimeString();
                     //MessageBox.Show(custom);
-                    Reply.Text = Reply.Text + "Its " + custom;
+                   // Reply1.Text = Reply1.Text + "Its " + custom;
                     speech.Speak("Its " + custom);
                 }
 
@@ -154,129 +152,89 @@ namespace My_Friend
                     //DateTime date = new DateTime();
                     string custom = DateTime.Now.ToLongTimeString();
                     //MessageBox.Show(custom);
-                    Reply.Text = Reply.Text + "Its " + custom;
+                    //Reply.Text = Reply.Text + "Its " + custom;
                     speech.Speak("Its " + custom);
                 }
                 else if (question.Contains("shutdown"))
-                {
-                    speech.Speak(" Steve Jobs is the fouder of Apple company");
+                {                   
                     Process.Start("shutdown", "/s /t 0"); Process.Start("Shutdown", "-s -t 10");
                 }
-                else if (question.Contains("Lets go for a walk"))
+                else if (question.Contains("Facebook"))
                 {
-                    Reply.Text = Reply.Text + " Sorry, I can't";
-                    speech.Speak(" Sorry, I can't");
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+                    process.StartInfo.UseShellExecute = true;
+                   
+                    System.Diagnostics.Process.Start("http://www.facebook.com");
+                    
                 }
-                else if (question.Contains("Why"))
-                {
-                    Reply.Text = Reply.Text + " Because I am just a computer software";
-                    speech.Speak(" Because I am just a computer software");
-                }
-                else if (question.Contains("I am feeling sick"))
-                {
-                    Reply.Text = Reply.Text + " You should go to a physician";
-                    speech.Speak(" You should go to a physician");
-                }
-                else if (question.Contains("I want to Play game"))
-                {
-                    Reply.Text = Reply.Text + " You should focus on studies";
-                    speech.Speak(" You should focus on studies");
-                }
-                else if (question.Contains("Can you help me"))
-                {
-                    Reply.Text = Reply.Text + " How may I help you";
-                    speech.Speak(" How may I help you");
-                }
-                else if (question.Contains("Do you have feelings"))
-                {
-                    Reply.Text = Reply.Text + " No I don't";
-                    speech.Speak(" No I don't");
-                }
-                else if (question.Contains("I am hungry"))
-                {
-                    Reply.Text = Reply.Text + " You should eat something";
-                    speech.Speak(" You should eat something");
-                }
-                else if (question.Contains("Where do you live"))
-                {
-                    Reply.Text = Reply.Text + " I don't live anywhere";
-                    speech.Speak(" I don't live anywhere");
-                }
-                else if (question.Contains("Do you want to eat something"))
-                {
-                    Reply.Text = Reply.Text + " No I can't eat";
-                    speech.Speak(" No I can't eat");
-                }
-                else if (question.Contains("Hello"))
-                {
-                    Reply.Text = Reply.Text + " Hello sir";
-                    speech.Speak(" Hello sir");
-                }
-                else if (question.Contains("Hey"))
-                {
-                    Reply.Text = Reply.Text + " Hey sir";
-                    speech.Speak(" Hey sir");
-                }
-                else if (question.Contains("Take Care"))
-                {
-                    Application.Exit();
-                }
-                else if (question.Contains("Suggest me few good movies"))
-                {
-                    Reply.Text = Reply.Text + " You should google them";
-                    speech.Speak(" You should google them");
-                }
-                else if (question.Contains("I am feeling sick"))
-                {
-                    Reply.Text = Reply.Text + " You should go to a physician";
-                    speech.Speak(" You should go to a physician");
-                }
-                else if (question.Contains("I want to be a good programmer"))
-                {
-                    Reply.Text = Reply.Text + " You should work hard then";
-                    speech.Speak(" You should work hard then");
-                }
-                else if (question.Contains("Do you want to be friend of mine"))
-                {
-                    Reply.Text = Reply.Text + " That is the reason I am designed for";
-                    speech.Speak(" That is the reason I am designed for");
-                }
+               else if (question.Contains("facebook"))
+               {
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
 
-                else if (question.Contains("Tell me your name"))
-                {
-                    Reply.Text = Reply.Text + "My name is My Friend";
-                    speech.Speak(" My name is My Friend");
-                }
-                else if (question.Contains("Who is your developer"))
-                {
-                    Reply.Text = Reply.Text + "You are my developer";
-                    speech.Speak(" You are my developer");
-                }
-                else if (question.Contains("Who is president of USA"))
-                {
-                    Reply.Text = Reply.Text + "Barack Obama is the President of USA";
-                    speech.Speak(" Barack Obama is the President of USA");
-                }
-                else if (question.Contains("Tell me few products of Pepsi"))
-                {
-                    Reply.Text = Reply.Text + "Dew, Pepsi Fanta are Pepsi's product";
-                    speech.Speak("Dew, Pepsi Fanta are Pepsi's product");
-                }
-                else if (question.Contains("Who is your favourite star"))
-                {
-                    Reply.Text = Reply.Text + "Johnny Depp is my favourite star";
-                    speech.Speak(" Johnny Depp is my favourite star");
-                }
-                else if (question.Contains("Who is best Apple or Samsung"))
-                {
-                    Reply.Text = Reply.Text + "Both are best but my choice is Apple";
-                    speech.Speak(" Both are best but my choice is Apple");
-                }
-                else if (question.Contains("Who is founder of Apple company"))
-                {
-                    Reply.Text = Reply.Text + "Steve Jobs is the fouder of Apple company";
-                    speech.Speak(" Steve Jobs is the fouder of Apple company");
-                }
+                   System.Diagnostics.Process.Start("http://www.facebook.com");
+
+               }
+               else if (question.Contains("open Google"))
+               {
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
+
+                   System.Diagnostics.Process.Start("http://www.google.com");
+
+               }
+               else if (question.Contains("open google"))
+               {
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
+
+                   System.Diagnostics.Process.Start("http://www.google.com");
+
+               }
+               else if (question.Contains("open Gmail"))
+               {
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
+
+                   System.Diagnostics.Process.Start("http://www.gmail.com");
+
+               }
+               else if (question.Contains("open e"))
+               {
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
+                   process = Process.Start("explorer.exe",@"E:\" );
+
+               }
+
+               else if (question.Contains("open paint"))
+               {
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
+                   process = Process.Start("explorer.exe", @"C:\Windows\system32\mspaint.exe");
+               }
+
+               else if (question.Contains("screenshot"))
+               {
+                   Bitmap printscreen = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+                   Graphics graphics = Graphics.FromImage(printscreen as Image);
+                   graphics.CopyFromScreen(0, 0, 0, 0, printscreen.Size);
+                   printscreen.Save(@"C:\Temp\printscreen.jpg", ImageFormat.Jpeg);
+
+                   System.Diagnostics.Process process = new System.Diagnostics.Process();
+                   process.StartInfo.UseShellExecute = true;
+                   process = Process.Start("explorer.exe", @"C:\Temp\printscreen.jpg");
+               }
+
+               else if (question.Contains("open snipping tool"))
+               {
+                   if (!Environment.Is64BitProcess)
+                       System.Diagnostics.Process.Start("C:\\Windows\\sysnative\\SnippingTool.exe");
+                   else
+                       System.Diagnostics.Process.Start("C:\\Windows\\system32\\SnippingTool.exe");
+               }
+
+
                 else if (question.Contains("Exit"))
                 {
                     Application.Exit();
@@ -325,11 +283,10 @@ namespace My_Friend
 
             }
 
+        
+
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -351,5 +308,24 @@ namespace My_Friend
             obj.Show();
             this.Hide();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+
+
     }
 }

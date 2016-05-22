@@ -78,7 +78,5 @@ namespace My_Friend
                 Console.WriteLine(e.ToString());
             }
         }
-
-
     }
 }
